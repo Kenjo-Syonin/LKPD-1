@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD NO 6</title>
+    <style>
+        .search-container {
+          width: 320px;
+          margin: 20px auto;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      
+        .search-input {
+          width: 95%;
+          height: 30px;
+          padding: 10px;
+          font-size: 16px;
+          border: 1px solid #ccc;
+        }
+      
+        .search-button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 30px;
+          padding: 10px 20px;
+          font-size: 16px;
+          background-color: #009999;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      
+        .search-button:hover {
+          background-color: #3e8e41;
+        }
+      
+        .search-result {
+          margin-top: 20px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+        }
+      </style>
+      
+</head>
+<body>
+
+      <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="Search...">
+        <button id="search-button" class="search-button">Search</button>
+        <div id="search-result" class="search-result"></div>
+      </div>
+      
+      <script>
+        const searchInput = document.getElementById('search-input');
+        const searchButton = document.getElementById('search-button');
+        const searchResult = document.getElementById('search-result');
+      
+        searchButton.addEventListener('click', () => {
+          const searchText = searchInput.value.trim();
+          if (searchText !== '') {
+            searchResult.innerHTML = `Mencari data: ${searchText}...`;
+          } else {
+            searchResult.innerHTML = '';
+          }
+        });
+      </script>
+</body>
+</html> 
